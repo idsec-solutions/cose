@@ -37,8 +37,6 @@ The following changes have been made to the original library:
 
 ## Installation
 
-Starting with version **0.9.0**, the library is published as an artifact in the [Maven Central Repository](https://search.maven.org/#search%7Cga%7C1%7Ccose-java).
-
 To include it in a Maven project, add the following dependency to the `dependencies` section of your `pom.xml` file:
 
 ```xml
@@ -48,3 +46,6 @@ To include it in a Maven project, add the following dependency to the `dependenc
     <version>1.2.1</version>
 </dependency>
 ```
+
+Note: The plan is to publish this code on maven central in the near future once we have done some final reviews,
+and checked with the IETF community that doing so would be appreciated and considered respectful to the original authors.
