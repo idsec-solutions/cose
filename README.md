@@ -1,5 +1,10 @@
 # CBOR Object Encryption and Signing (COSE) Implementation in Java
 
+[![License: BSD-3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue?style=for-the-badge)](LICENSE)
+[![REUSE](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.reuse.software%2Fstatus%2Fgithub.com%2Fidsec-solutions%2Fcose&query=status&style=for-the-badge&label=REUSE)](https://api.reuse.software/info/github.com/idsec-solutions/cose)
+
+[![Tag](https://img.shields.io/github/v/tag/idsec-solutions/cose?style=for-the-badge&color=green)](https://github.com/idsec-solutions/cose/tags)
+
 This project is a Java implementation of the IETF CBOR Encoded Message Syntax (COSE).  
 COSE is specified in [RFC 8152](https://tools.ietf.org/html/rfc8152).
 
@@ -48,4 +53,4 @@ To include it in a Maven project, add the following dependency to the `dependenc
 ```
 
 Note: The plan is to publish this code on maven central in the near future once we have done some final reviews,
-and checked with the IETF community that doing so would be appreciated and considered respectful to the original authors.
+and checked with the IETF community that doing so would be appreciated and considered respectful to the original authors. 

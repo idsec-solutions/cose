@@ -1,8 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// SPDX-FileCopyrightText: 2016-2024 COSE-JAVA
+// SPDX-FileCopyrightText: 2025 IDsec Solutions AB
+//
+// SPDX-License-Identifier: BSD-3-Clause
+
 package se.idsec.cose;
 
 import java.security.NoSuchAlgorithmException;

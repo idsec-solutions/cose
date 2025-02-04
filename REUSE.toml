@@ -1,0 +1,58 @@
+# SPDX-FileCopyrightText: 2025 IDSec Solutions
+#
+# SPDX-License-Identifier: CC0-1.0
+
+version = 1
+
+# Main project files
+[[annotations]]
+path = [
+    "CHANGELOG.md",
+    "REUSE.toml",
+    "README.md",
+    "pom.xml",
+    "**/*.cddl",
+    "docs/element-list",
+    "**/*/resources/**/*.json",
+    "docs/**/*.html",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "IDSec Solutions. <https://github.com/idsec-solutions>"
+SPDX-License-Identifier = "CC0-1.0"
+
+
+# jQuery javadoc resources
+[[annotations]]
+path = [
+    "docs/script-dir/jquery-3.6.1.min.js",
+    "docs/script-dir/jquery-ui.min.js",
+    "docs/script-dir/jquery-ui.min.css"
+]
+precedence = "override"
+SPDX-FileCopyrightText = "Copyright jQuery Foundation and other contributors"
+SPDX-License-Identifier = "MIT"
+
+# Oracle javadoc scripts
+[[annotations]]
+path = [
+    "docs/copy.svg",
+    "docs/link.svg",
+    "docs/script.js",
+    "docs/search.js",
+    "docs/search-page.js"
+]
+precedence = "override"
+SPDX-FileCopyrightText = "Copyright (c) Oracle and/or its affiliates"
+SPDX-License-Identifier = "GPL-2.0-only WITH Classpath-exception-2.0"
+
+# Oracle javadoc resources
+[[annotations]]
+path = [
+    "docs/resources/glass.png",
+    "docs/resources/x.png",
+    "docs/legal/ADDITIONAL_LICENSE_INFO",
+    "docs/legal/ASSEMBLY_EXCEPTION"
+]
+precedence = "override"
+SPDX-FileCopyrightText = "Copyright (c) Oracle and/or its affiliates"
+SPDX-License-Identifier = "GPL-2.0-only WITH Classpath-exception-2.0"
