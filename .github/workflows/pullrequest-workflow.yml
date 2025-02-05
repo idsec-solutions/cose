@@ -1,0 +1,30 @@
+# SPDX-FileCopyrightText: 2025 IDsec Solutions AB
+#
+# SPDX-License-Identifier: CC0-1.0
+
+---
+name: Pull Request Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  dependencyreviewlint:
+    uses: diggsweden/.github/.github/workflows/dependency-review.yml@main
+  licenselint:
+    uses: diggsweden/.github/.github/workflows/license-lint.yml@main
+  test:
+    permissions:
+      contents: read
+      packages: read
+    if: always()
+    needs: [licenselint,dependencyreviewlint]
+    uses: ./.github/workflows/test.yml

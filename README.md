@@ -5,6 +5,8 @@
 
 [![Tag](https://img.shields.io/github/v/tag/idsec-solutions/cose?style=for-the-badge&color=green)](https://github.com/idsec-solutions/cose/tags)
 
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/idsec-solutions/cose/badge?style=for-the-badge)](https://scorecard.dev/viewer/?uri=github.com/idsec-solutions/cose)
+
 This project is a Java implementation of the IETF CBOR Encoded Message Syntax (COSE).  
 COSE is specified in [RFC 8152](https://tools.ietf.org/html/rfc8152).
 
