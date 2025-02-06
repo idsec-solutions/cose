@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Migrate namespace et al
+- Migrate namespace etc
 - Declare reuse/spdx license
 
 ## [1.2.1-release-tag] - 2025-01-18
