@@ -1,0 +1,62 @@
+# Basic project metadata
+project:
+  name: cose-lib
+  description: A Java implementation that supports the COSE secure message specification.</description>
+  license: BSD-3-Clause 
+  copyright: 2025 Digg - Agency for Digital Government
+  inceptionYear: 2025
+  snapshot:
+    pattern: .*-SNAPSHOT
+    label: early-access
+    fullChangelog: true
+
+# GitHub release configuration
+release:
+  github:
+    owner: diggsweden
+    overwrite: true     # Allows updating existing releases
+    draft: false        # Creates as final release, not draft
+    sign: true          # Signs release assets
+    branch: main
+    changelog:
+      enabled: true
+      external: ReleasenotesTmp
+
+checksum:
+  algorithms:
+    - SHA-256
+    - SHA-512
+
+# GPG signing configuration
+signing:
+  active: ALWAYS
+  armored: true
+
+# Maven deployment to GitHub packages
+deploy:
+  maven:
+    github:
+      app:
+        active: ALWAYS
+        url: https://maven.pkg.github.com/diggsweden/cose-lib
+        applyMavenCentralRules: true
+        snapshotSupported: true
+        stagingRepositories:           
+          - target/staging-deploy
+
+# SBOM generation
+catalog:
+  sbom:
+    syft:
+      active: ALWAYS
+      formats: 
+        - CYCLONEDX_JSON  
+        - SPDX_JSON
+      pack:
+        enabled: true
+
+# Syft need to know what to sign
+distributions:
+  library:
+    artifacts:
+      - path: target/cose-lib-{{projectVersion}}.jar

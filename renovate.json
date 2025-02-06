@@ -1,0 +1,83 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    ":gitSignOff",
+    ":maintainLockFilesWeekly",
+    ":automergeMinor",
+    ":semanticCommits"
+  ],
+  "semanticCommitType": "build",
+  "semanticCommitScope": "deps",
+  "commitMessageLowerCase": "auto",
+  "commitBody": "Signed-off-by: {{{gitAuthor}}}",
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "enabled": true,
+    "automerge": true
+  },
+  "packageRules": [
+    {
+      "matchManagers": ["github-actions"],
+      "addLabels": ["actions"],
+      "pinDigests": true,
+      "groupName": "github actions"
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "matchPackageNames": ["slsa-framework/slsa-github-generator"],
+      "pinDigests": false
+    },
+    {
+      "description": "Maven Build Plugins",
+      "groupName": "maven build plugins",
+      "matchPackagePatterns": [
+        "^org\\.apache\\.maven\\.plugins:"
+      ],
+      "matchPackageNames": [
+        "org.apache.maven.plugins:maven-compiler-plugin",
+        "org.apache.maven.plugins:maven-source-plugin",
+        "org.apache.maven.plugins:maven-javadoc-plugin",
+        "org.apache.maven.plugins:maven-gpg-plugin",
+        "org.apache.maven.plugins:maven-enforcer-plugin"
+      ]
+    },
+    {
+      "description": "Test dependencies",
+      "groupName": "test dependencies",
+      "matchPackageNames": [
+        "junit:junit"
+      ],
+      "labels": ["test"]
+    },
+    {
+      "description": "Bouncy Castle dependencies",
+      "groupName": "bouncy castle",
+      "matchPackageNames": [
+        "org.bouncycastle:bcprov-jdk18on",
+        "org.bouncycastle:bcpkix-jdk18on"
+      ]
+    },
+    {
+      "description": "CBOR dependencies",
+      "groupName": "cbor",
+      "matchPackageNames": [
+        "com.upokecenter:cbor"
+      ]
+    },
+    {
+      "description": "EdDSA dependencies",
+      "groupName": "eddsa",
+      "matchPackageNames": [
+        "net.i2p.crypto:eddsa"
+      ]
+    },
+    {
+      "description": "Code coverage",
+      "groupName": "code coverage",
+      "matchPackageNames": [
+        "org.jacoco:jacoco-maven-plugin"
+      ]
+    }
+  ]
+}
